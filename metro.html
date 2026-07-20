@@ -1,10 +1,11 @@
 <!doctype html>
+<!-- Build: geographic-relative-layout v2026.07.20.2; north-up/east-right -->
 <html lang="zh-Hant">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<title>北北桃捷運互動票價・路線・時間</title>
+<title>北北桃捷運互動票價・路線・時間｜地理相對配置版 v2026.07.20.2</title>
 <style>
 :root{--bg:#f4f7fb;--card:#fff;--ink:#172033;--muted:#687287;--line:#dce3ee;--accent:#2c5cc5;--shadow:0 14px 40px rgba(23,32,51,.09);--radius:22px;--success:#07825c;--warn:#a25b00}
 @media(prefers-color-scheme:dark){:root{--bg:#0f1420;--card:#171e2b;--ink:#f2f5fb;--muted:#9aa7bd;--line:#2a3446;--accent:#7da5ff;--shadow:0 18px 50px rgba(0,0,0,.28);--success:#6bd8ad;--warn:#ffc261}}
@@ -25,7 +26,7 @@ button,select,input{font:inherit}.wrap{max-width:1320px;margin:auto;padding:22px
 /* Official-map-inspired interactive SVG network */
 .network{padding:14px}.map-toolbar{display:grid;grid-template-columns:minmax(220px,1fr) auto auto;gap:10px;align-items:center;margin-bottom:10px}.map-actions{display:flex;gap:6px}.map-actions button{width:38px;height:38px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:11px;cursor:pointer;font-weight:900}.map-actions button:hover{background:var(--bg)}
 .map-guide{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:10px 12px;margin-bottom:10px;border:1px solid var(--line);border-radius:13px;background:var(--bg);color:var(--muted);font-size:.78rem;line-height:1.5}.map-guide b{color:var(--ink)}.selection-key{display:flex;gap:12px;white-space:nowrap}.selection-key span{display:inline-flex;align-items:center;gap:5px}.key-dot{width:7.7px;height:7.7px;border-radius:50%;display:inline-block}.key-start{background:#07825c}.key-end{background:#d7374f}
-.map-viewport{position:relative;height:min(74vh,760px);min-height:520px;overflow:auto;border:1px solid var(--line);border-radius:18px;background:#fbfcff;cursor:grab;overscroll-behavior:contain;scrollbar-width:thin}.map-viewport.dragging{cursor:grabbing;user-select:none}.map-stage{position:relative;transform-origin:0 0}.metro-svg{display:block;width:100%;height:100%;background:radial-gradient(circle at 80% 20%,rgba(40,95,180,.055),transparent 28%),#fbfcff}.map-title{font-size:30px;font-weight:900;fill:#1f2937;letter-spacing:.03em}.map-subtitle{font-size:14px;font-weight:700;fill:#718096}.map-region{font-size:20px;font-weight:900;fill:#93a0b5;letter-spacing:.13em}.route-path{fill:none;stroke-linecap:round;stroke-linejoin:round;transition:opacity .2s,filter .2s}.route-path.is-path{filter:drop-shadow(0 0 7px rgba(29,78,216,.8));opacity:1!important}.route-outline{fill:none;stroke-linecap:round;stroke-linejoin:round}.transfer-link{fill:none;stroke:#8995a8;stroke-width:2.8;stroke-dasharray:5.6 5.6;opacity:.7}.map-system.hidden-system{display:none}.map-system.dim-system{opacity:.13}.map-station{cursor:pointer;outline:none;transition:opacity .2s}.map-station .hit{fill:transparent}.map-station .station-dot{fill:#fff;stroke-width:2.8;vector-effect:non-scaling-stroke;transition:r .16s,filter .16s,fill .16s}.map-station.transfer .station-dot{stroke:#253247;stroke-width:3.5}.map-station .transfer-core{fill:#fff;stroke:#253247;stroke-width:1.4;vector-effect:non-scaling-stroke}.map-station text{font-family:Inter,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;paint-order:stroke;stroke:#fbfcff;stroke-width:5px;stroke-linejoin:round;pointer-events:none}.map-station .station-label{transition:opacity .16s}.map-station .station-code{font-size:11.5px;font-weight:950;fill:#40506a}.map-station .station-name{font-size:12.5px;font-weight:800;fill:#243047}.map-station.compact-label .station-code{font-size:10px}.map-station.compact-label .station-name{font-size:11px}.label-leader{fill:none;stroke:#718096;stroke-width:1.35;vector-effect:non-scaling-stroke;opacity:0;pointer-events:none}.map-station.label-shifted .label-leader{opacity:.58}.map-station.label-hidden .station-label,.map-station.label-hidden .label-leader{opacity:0}.map-station.label-hidden:hover .station-label,.map-station.label-hidden:focus .station-label,.map-station.label-hidden.selected-start .station-label,.map-station.label-hidden.selected-end .station-label,.map-station.label-hidden.on-path .station-label{opacity:1}.map-fixed-label{paint-order:stroke;stroke:#fbfcff;stroke-width:8px;stroke-linejoin:round}.map-station:hover .station-dot,.map-station:focus .station-dot{r:7;filter:drop-shadow(0 2px 5px rgba(28,42,66,.35))}.map-station.selected-start .station-dot{fill:#07825c!important;stroke:#fff!important;stroke-width:2.8;filter:drop-shadow(0 0 8px rgba(7,130,92,.9))}.map-station.selected-end .station-dot{fill:#d7374f!important;stroke:#fff!important;stroke-width:2.8;filter:drop-shadow(0 0 8px rgba(215,55,79,.9))}.map-station.on-path .station-dot{fill:#2c5cc5;stroke:#fff!important;filter:drop-shadow(0 0 6px rgba(44,92,197,.75))}.map-station.no-match{opacity:.08;pointer-events:none}.map-station.search-match .station-dot{fill:#ffca28;filter:drop-shadow(0 0 9px rgba(255,178,0,.85))}.map-station.selected-start text,.map-station.selected-end text{font-weight:950}.map-tooltip{position:fixed;z-index:40;pointer-events:none;display:none;max-width:230px;padding:9px 11px;border-radius:12px;background:#172033;color:#fff;box-shadow:0 12px 32px rgba(0,0,0,.28);font-size:.76rem;line-height:1.45}.map-tooltip.show{display:block}.map-tooltip b{display:block;font-size:.84rem}.map-tooltip small{opacity:.75}.map-legend{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.legend-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 9px;border:1px solid var(--line);border-radius:999px;font-size:.72rem;color:var(--muted);background:var(--card)}.legend-line{width:14px;height:3.5px;border-radius:9px}.map-credit{margin-top:9px;color:var(--muted);font-size:.7rem;line-height:1.55}.map-credit a{color:var(--accent);text-decoration:none}
+.map-viewport{position:relative;height:min(74vh,760px);min-height:520px;overflow:auto;border:1px solid var(--line);border-radius:18px;background:#fbfcff;cursor:grab;overscroll-behavior:contain;scrollbar-width:thin}.map-viewport.dragging{cursor:grabbing;user-select:none}.map-stage{position:relative;transform-origin:0 0}.metro-svg{display:block;width:100%;height:100%;background:radial-gradient(circle at 80% 20%,rgba(40,95,180,.055),transparent 28%),#fbfcff}.map-title{font-size:24px;font-weight:900;fill:#1f2937;letter-spacing:.03em}.map-subtitle{font-size:11.2px;font-weight:700;fill:#718096}.map-region{font-size:16px;font-weight:900;fill:#93a0b5;letter-spacing:.13em}.route-path{fill:none;stroke-linecap:round;stroke-linejoin:round;transition:opacity .2s,filter .2s}.route-path.is-path{filter:drop-shadow(0 0 7px rgba(29,78,216,.8));opacity:1!important}.route-outline{fill:none;stroke-linecap:round;stroke-linejoin:round}.transfer-link{fill:none;stroke:#8995a8;stroke-width:2.24;stroke-dasharray:4.48 4.48;opacity:.7}.map-system.hidden-system{display:none}.map-system.dim-system{opacity:.13}.map-station{cursor:pointer;outline:none;transition:opacity .2s}.map-station .hit{fill:transparent}.map-station .station-dot{fill:#fff;stroke-width:2.8;vector-effect:non-scaling-stroke;transition:r .16s,filter .16s,fill .16s}.map-station.transfer .station-dot{stroke:#253247;stroke-width:3.5}.map-station .transfer-core{fill:#fff;stroke:#253247;stroke-width:1.4;vector-effect:non-scaling-stroke}.map-station text{font-family:Inter,"Noto Sans TC","PingFang TC","Microsoft JhengHei",sans-serif;paint-order:stroke;stroke:#fbfcff;stroke-width:4px;stroke-linejoin:round;pointer-events:none}.map-station .station-label{transition:opacity .16s}.map-station .station-code{font-size:9.2px;font-weight:950;fill:#40506a}.map-station .station-name{font-size:10px;font-weight:800;fill:#243047}.map-station.compact-label .station-code{font-size:8px}.map-station.compact-label .station-name{font-size:8.8px}.label-leader{fill:none;stroke:#718096;stroke-width:1.08;vector-effect:non-scaling-stroke;opacity:0;pointer-events:none}.map-station.label-shifted .label-leader{opacity:.58}.map-station.label-hidden .station-label,.map-station.label-hidden .label-leader{opacity:0}.map-station.label-hidden:hover .station-label,.map-station.label-hidden:focus .station-label,.map-station.label-hidden.selected-start .station-label,.map-station.label-hidden.selected-end .station-label,.map-station.label-hidden.on-path .station-label{opacity:1}.map-fixed-label{paint-order:stroke;stroke:#fbfcff;stroke-width:6.4px;stroke-linejoin:round}.map-station:hover .station-dot,.map-station:focus .station-dot{r:7;filter:drop-shadow(0 2px 5px rgba(28,42,66,.35))}.map-station.selected-start .station-dot{fill:#07825c!important;stroke:#fff!important;stroke-width:2.8;filter:drop-shadow(0 0 8px rgba(7,130,92,.9))}.map-station.selected-end .station-dot{fill:#d7374f!important;stroke:#fff!important;stroke-width:2.8;filter:drop-shadow(0 0 8px rgba(215,55,79,.9))}.map-station.on-path .station-dot{fill:#2c5cc5;stroke:#fff!important;filter:drop-shadow(0 0 6px rgba(44,92,197,.75))}.map-station.no-match{opacity:.08;pointer-events:none}.map-station.search-match .station-dot{fill:#ffca28;filter:drop-shadow(0 0 9px rgba(255,178,0,.85))}.map-station.selected-start text,.map-station.selected-end text{font-weight:950}.map-tooltip{position:fixed;z-index:40;pointer-events:none;display:none;max-width:230px;padding:9px 11px;border-radius:12px;background:#172033;color:#fff;box-shadow:0 12px 32px rgba(0,0,0,.28);font-size:.76rem;line-height:1.45}.map-tooltip.show{display:block}.map-tooltip b{display:block;font-size:.84rem}.map-tooltip small{opacity:.75}.map-legend{display:flex;flex-wrap:wrap;gap:7px;margin-top:10px}.legend-chip{display:inline-flex;align-items:center;gap:6px;padding:6px 9px;border:1px solid var(--line);border-radius:999px;font-size:.72rem;color:var(--muted);background:var(--card)}.legend-line{width:14px;height:3.5px;border-radius:9px}.map-credit{margin-top:9px;color:var(--muted);font-size:.7rem;line-height:1.55}.map-credit a{color:var(--accent);text-decoration:none}.map-credit b{color:var(--ink)}.compass-line{fill:none;stroke:#65748b;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.compass-text{font-size:11px;font-weight:900;fill:#65748b}
 @media(prefers-color-scheme:dark){.map-viewport,.metro-svg{background:#f8fafc}.map-guide{background:var(--bg)}.map-station text{stroke:#f8fafc}.map-title{fill:#172033}.map-subtitle{fill:#65748b}.map-region{fill:#9aa7ba}}
 @media(max-width:760px){.map-toolbar{grid-template-columns:1fr auto}.map-toolbar .filters{grid-column:1/-1}.map-guide{align-items:flex-start;flex-direction:column}.selection-key{white-space:normal}.map-viewport{height:68vh;min-height:480px}.map-actions button{width:36px;height:36px}}
 @media print{.map-toolbar,.map-guide,.map-actions{display:none!important}.map-viewport{height:auto;overflow:visible;border:0}.map-stage{width:100%!important;height:auto!important}.metro-svg{height:auto}.map-credit{display:block}}
@@ -36,19 +37,19 @@ button,select,input{font:inherit}.wrap{max-width:1320px;margin:auto;padding:22px
 <div class="wrap">
 <header class="hero">
  <div><div class="eyebrow">TAIPEI · NEW TAIPEI · TAOYUAN</div><h1>北北桃捷運<br>互動旅程規劃</h1><p>整合台北捷運、環狀線、桃園機場捷運、淡海輕軌、安坑輕軌與三鶯線。選擇起訖站，即時計算路線、轉乘、單程票價與搭乘時間。</p></div>
- <div class="stamp">資料基準：2026-07-20</div>
+ <div class="stamp">最新版輸出：2026-07-20 13:53:05｜地理相對配置版 v2026.07.20.2</div>
 </header>
 <div class="alert" id="sanyingAlert"><span class="pulse"></span><div><b>三鶯線試營運提示</b><br><small id="sanyingAlertText">2026/6/30–8/31 持電子票證免費，營運 10:00–20:00；單程票仍依公告售票。</small></div></div>
 <div class="grid">
  <main class="content">
   <section class="panel" id="panel-map">
-   <div class="section-heading"><h2>互動路網</h2><p>點選第一站設定出發，第二站設定抵達</p></div>
+   <div class="section-heading"><h2>互動路網</h2><p>北上東右的地理相對配置；點選第一站設定出發，第二站設定抵達</p></div>
    <div class="card network">
     <div class="map-toolbar"><input class="search" id="stationSearch" placeholder="搜尋站名或代碼，例如：台北車站、A12、V26"><div class="filters" id="filters"></div><div class="map-actions"><button id="zoomOut" title="縮小">−</button><button id="zoomFit" title="顯示全圖">⌂</button><button id="zoomIn" title="放大">＋</button></div></div>
     <div class="map-guide"><span id="mapStatus"><b>點選地圖車站</b>：第一次設為起點，第二次設為終點並自動規劃。</span><span class="selection-key"><span><i class="key-dot key-start"></i>起點</span><span><i class="key-dot key-end"></i>終點</span></span></div>
     <div class="map-viewport" id="mapViewport"><div class="map-stage" id="mapStage"><div id="network"></div></div></div>
     <div class="map-legend" id="mapLegend"></div>
-    <div class="map-credit">路網配置與視覺語彙參考<a href="https://www.metro.taipei/cp.aspx?n=73B51F32ED23C5E1" target="_blank" rel="noopener">臺北捷運官方路網圖</a>重新繪製；本圖另整合桃園機場捷運、新北輕軌與三鶯線，並非官方原圖。</div>
+    <div class="map-credit">車站位置依官方座標與營運單位公告位置重新配置，<b>上方為北、右方為東</b>；為提升可讀性採非等比例展開，只表達相對方位，不作距離比例尺。路線視覺語彙參考<a href="https://www.metro.taipei/cp.aspx?n=73B51F32ED23C5E1" target="_blank" rel="noopener">臺北捷運官方路網圖</a>，並非官方原圖。</div>
   </div></section>
   <section class="panel" id="panel-fare">
    <div class="section-heading"><h2>票價說明</h2><p>各營運系統票價規則與跨系統計價方式</p></div>
@@ -143,24 +144,46 @@ function buildSegments(path){
  return {display:merged,fareSegs};
 }
 function stationLabel(pid){const p=physical.get(pid),codes=uniqueCodes(p).join('／');return `${codes} ${p.name}｜${sysMeta[p.system].short}`}
-function populateSelects(){const groups={taipei:[],taoyuan:[],ntlrt:[],ntmetro:[]};physical.forEach(p=>groups[p.system].push(p));Object.values(groups).forEach(a=>a.sort((x,y)=>x.name.localeCompare(y.name,'zh-Hant')));['from','to'].forEach(id=>{const s=$('#'+id);s.innerHTML='<option value="">請選擇車站</option>';Object.entries(groups).forEach(([sys,arr])=>{const g=document.createElement('optgroup');g.label=sysMeta[sys].name;arr.forEach(p=>{const o=document.createElement('option');o.value=p.id;o.textContent=stationLabel(p.id);g.appendChild(o)});s.appendChild(g)})})}
+function routeStationLabel(p,line,code){const secondary=uniqueCodes(p).filter(c=>c!==code&&!c.startsWith('AX'));return `${code}${secondary.length?'／'+secondary.join('／'):''} ${p.name}`}
+// Route-aware natural station-code ordering: A14 < A14a < A15, R22 < R22A < R23.
+function compareStationCodes(a,b){
+ const parse=code=>{const m=String(code).trim().match(/^([A-Za-z]+)(\d+)([A-Za-z]*)$/);return m?{prefix:m[1].toUpperCase(),number:Number(m[2]),suffix:m[3].toLowerCase()}:{prefix:String(code).toUpperCase(),number:Number.MAX_SAFE_INTEGER,suffix:''}};
+ const x=parse(a),y=parse(b);
+ return x.prefix.localeCompare(y.prefix,'en')||x.number-y.number||x.suffix.localeCompare(y.suffix,'en',{sensitivity:'base'})||String(a).localeCompare(String(b),'en',{numeric:true,sensitivity:'base'});
+}
+function populateSelects(){
+ const routeGroups=D.lines.filter(line=>line.id!=='AX').map((line,routeIndex)=>{
+  const seen=new Set(),stations=[];
+  line.stations.forEach((code,stationIndex)=>{const pid=physId(line.system,nameOf(line.system,code));if(seen.has(pid))return;seen.add(pid);const p=physical.get(pid);if(p)stations.push({p,code,stationIndex})});
+  stations.sort((a,b)=>compareStationCodes(a.code,b.code)||a.stationIndex-b.stationIndex);
+  return {line,routeIndex,stations};
+ });
+ ['from','to'].forEach(id=>{
+  const s=$('#'+id);s.innerHTML='<option value="">請選擇車站</option>';
+  routeGroups.forEach(({line,stations})=>{
+   const g=document.createElement('optgroup');g.label=`${line.id} ${line.name}｜${sysMeta[line.system].short}`;
+   stations.forEach(({p,code})=>{const o=document.createElement('option');o.value=p.id;o.dataset.route=line.id;o.dataset.code=code;o.textContent=routeStationLabel(p,line,code);g.appendChild(o)});
+   s.appendChild(g);
+  });
+ });
+}
 const MAP_W=1700,MAP_H=1300;
 const routeLayout={
- '文湖線':[['BR01',1490,1130],['BR04',1370,1030],['BR08',1240,880],['BR09',1210,810],['BR10',1210,680],['BR11',1210,560],['BR13',1280,470],['BR14',1350,440],['BR18',1480,460],['BR23',1530,580],['BR24',1500,630]],
- '淡水信義線':[['R02',1400,810],['R05',1210,810],['R07',1110,800],['R08',1040,780],['R10',1050,650],['R11',1070,570],['R13',1060,470],['R16',1060,360],['R22',1060,250],['R27',1050,130],['R28',1000,70]],
- '新北投支線':[['R22',1060,250],['R22A',1140,250]],
- '松山新店線':[['G01',1050,1180],['G03',1030,1090],['G04',1010,1040],['G09',1010,840],['G10',1040,780],['G12',970,690],['G13',990,610],['G14',1070,570],['G15',1130,570],['G16',1210,560],['G19',1450,560]],
- '小碧潭支線':[['G03',1030,1090],['G03A',1120,1125]],
- '中和新蘆線・新莊支線':[['O01',850,1110],['O02',920,930],['O05',1010,840],['O06',1110,800],['O07',1120,680],['O08',1130,570],['O11',1060,470],['O12',980,440],['O15',780,470],['O17',720,580],['O21',520,500]],
- '中和新蘆線・蘆洲支線':[['O12',980,440],['O50',900,390],['O54',700,300]],
- '板南線':[['BL01',520,780],['BL06',760,780],['BL07',810,760],['BL11',970,690],['BL12',1050,650],['BL14',1120,680],['BL15',1210,680],['BL18',1340,680],['BL22',1480,680],['BL23',1500,630]],
- '環狀線':[['Y07',1010,1040],['Y08',970,1020],['Y11',920,930],['Y16',810,760],['Y18',720,580],['Y20',630,500]],
- '機場捷運普通車':[['A1',1000,610],['A2',780,430],['A3',630,460],['A5',530,410],['A8',420,330],['A10',330,280],['A12',220,250],['A13',180,300],['A14a',180,350],['A18',240,520],['A22',180,700]],
- '機場捷運直達車':[['A1',1000,610],['A3',630,460],['A8',420,330],['A12',220,250],['A13',180,300],['A18',240,520]],
- '淡海輕軌・綠山線':[['V01',1010,110],['V03',880,80],['V05',760,90],['V09',600,140],['V11',500,70]],
- '淡海輕軌・藍海線一期':[['V01',1010,110],['V03',880,80],['V05',760,90],['V09',600,140],['V28',540,190],['V27',480,230],['V26',420,270]],
- '安坑輕軌':[['K01',650,1200],['K05',790,1130],['K08',900,1070],['K09',940,1050]],
- '三鶯線':[['LB01',490,815],['LB03',410,870],['LB06',310,960],['LB08',230,1020],['LB12',100,1130]]
+ "文湖線":[['BR01',1467,917.8],['BR02',1428.8,917.6],['BR03',1398.5,915.7],['BR04',1338.6,911.4],['BR05',1332.3,876.1],['BR06',1343,801.2],['BR07',1308.1,770.6],['BR08',1249.7,757.3],['BR09',1242.9,716],['BR10',1259.3,667.4],['BR11',1254.9,608.8],['BR12',1254.3,560.3],['BR13',1302.1,549],['BR14',1270.2,470.7],['BR15',1323.5,448.2],['BR16',1393.4,459.3],['BR17',1441,468],['BR18',1490.6,474.8],['BR19',1529.2,453],['BR20',1561.6,452.5],['BR21',1582,498.7],['BR22',1600.1,524],['BR23',1614.4,565.4],['BR24',1622.1,592.9]],
+ "淡水信義線":[['R02',1410.7,721.2],['R03',1372,718.5],['R04',1304,717.7],['R05',1242.9,716],['R06',1204.6,716.5],['R07',1159.1,712.6],['R08',1094.6,719.1],['R09',1081.1,669.5],['R10',1089.5,641.2],['R11',1107.2,605.6],['R12',1109.2,578.3],['R13',1102.5,552.1],['R14',1105.5,504.1],['R15',1135.6,450.8],['R16',1143.4,412.1],['R17',1120.7,375.2],['R18',1097.7,349.7],['R19',1078.4,333],['R20',1022.4,309.9],['R21',991.8,293.3],['R22',976.9,270.5],['R23',900,250],['R24',833.1,273.7],['R25',798.5,293.2],['R26',757.7,252.2],['R27',754,194.2],['R28',689,157.1]],
+ "新北投支線":[['R22',976.9,270.5],['R22A',1000.6,252]],
+ "松山新店線":[['G01',1212.7,1135.8],['G02',1236.4,1091.5],['G03',1246.7,1048.7],['G04',1236.6,1006.9],['G05',1232.6,948.8],['G06',1222.2,896.1],['G07',1193.5,822.5],['G08',1155.2,788.3],['G09',1122.7,755.9],['G10',1094.6,719.1],['G11',1050.3,702.9],['G12',1034,665.9],['G13',1046.1,622.6],['G14',1107.2,605.6],['G15',1184.2,605.2],['G16',1254.9,608.8],['G17',1305.3,611.6],['G18',1378.3,611.3],['G19',1456.2,619.4]],
+ "小碧潭支線":[['G03',1246.7,1048.7],['G03A',1170.4,1069.1]],
+ "中和新蘆線・新莊支線":[['O01',1040.4,964.6],['O02',1015.7,942.5],['O03',1052.4,890.9],['O04',1077.8,827.8],['O05',1122.7,755.9],['O06',1159.1,712.6],['O07',1186.5,663.1],['O08',1184.2,605.2],['O09',1186.1,569.2],['O10',1145.8,550.3],['O11',1102.5,552.1],['O12',1063,547.3],['O13',988.5,548.1],['O14',933.5,568],['O15',893.2,588.6],['O16',824.1,641.2],['O17',769.1,679],['O18',720.9,700],['O19',638.7,719],['O20',572.1,740.3],['O21',536.6,780.4]],
+ "中和新蘆線・蘆洲支線":[['O12',1063,547.3],['O50',967.1,508.9],['O51',907.4,483.1],['O52',869.7,466.3],['O53',833.5,445.7],['O54',785.9,420.3]],
+ "板南線":[['BL01',562.5,1124.5],['BL02',640.7,1094.3],['BL03',681.6,1062],['BL04',703.7,992],['BL05',722.3,917.4],['BL06',756.4,858.8],['BL07',772.7,828],['BL08',804.3,773.7],['BL09',829.1,733.5],['BL10',987,704.6],['BL11',1034,665.9],['BL12',1089.5,641.2],['BL13',1129,650.6],['BL14',1186.5,663.1],['BL15',1259.3,667.4],['BL16',1292.7,668.8],['BL17',1336.9,669.6],['BL18',1384.1,671],['BL19',1447.2,672.6],['BL20',1479.4,650.4],['BL21',1524.6,617.5],['BL22',1581.3,608.8],['BL23',1622.1,592.9]],
+ "環狀線":[['Y07',1236.6,1006.9],['Y08',1152.5,1005.8],['Y09',1132.8,963.8],['Y10',1083.4,950.6],['Y11',1015.7,942.5],['Y12',959.8,894.3],['Y13',925,876.4],['Y14',898.6,853.5],['Y15',830.4,825.9],['Y16',772.7,828],['Y17',796.3,760.3],['Y18',769.1,679],['Y19',759.5,622.3],['Y20',755,557.9]],
+ "機場捷運普通車":[['A1',1069.3,626.9],['A2',885.9,594.4],['A3',754.5,555.6],['A4',688.6,569.4],['A5',657.4,602.4],['A6',573.4,716.7],['A7',462.2,666.9],['A8',420.7,562.4],['A9',393.7,533.1],['A10',222.1,464.9],['A11',188.6,441.6],['A12',139.6,460.7],['A13',125.2,481.8],['A14a',106.9,512],['A15',88.4,587],['A16',97.4,696.7],['A17',106.8,768.8],['A18',94.9,828.2],['A19',75.8,897.1],['A20',98.5,1021.4],['A21',106.2,1091.3],['A22',108.2,1153.3]],
+ "機場捷運直達車":[['A1',1069.3,626.9],['A3',754.5,555.6],['A8',420.7,562.4],['A12',139.6,460.7],['A13',125.2,481.8],['A18',94.9,828.2]],
+ "淡海輕軌・綠山線":[['V01',754,194.2],['V02',745,173.1],['V03',739,152.3],['V04',734,133.4],['V05',695,115.4],['V06',650,110.5],['V07',616,100.2],['V08',579,93.2],['V09',552.9,86.2],['V10',566,77.8],['V11',605,68.6]],
+ "淡海輕軌・藍海線一期":[['V01',754,194.2],['V02',745,173.1],['V03',739,152.3],['V04',734,133.4],['V05',695,115.4],['V06',650,110.5],['V07',616,100.2],['V08',579,93.2],['V09',552.9,86.2],['V28',528.8,88.9],['V27',514.1,107.3],['V26',533.9,119.1]],
+ "安坑輕軌":[['K01',804,1211.3],['K02',848,1192.7],['K03',886.5,1173.5],['K04',920.6,1150.2],['K05',959.2,1118.2],['K06',987.4,1071.4],['K07',1018,1019],['K08',1063,969.6],['K09',1152.5,1005.8]],
+ "三鶯線":[['LB01',562.5,1124.5],['LB02',531.7,1139.4],['LB03',500.5,1164.6],['LB04',465.1,1184],['LB05',436.7,1202.2],['LB06',414.9,1223.2],['LB07',409,1193.8],['LB08',377.2,1156.5],['LB09',359.2,1148.4],['LB10',346.8,1125],['LB11',331.7,1084.5],['LB12',310.7,1034]]
 };
 const stationCoords=new Map(),routePointCache=[];
 function interpolateLine(line){
@@ -202,7 +225,7 @@ function labelPlacement(p,codes,coord){const c=codes[0]||'',n=parseInt((c.match(
  const overrides={
   'taipei:台北車站':[15,-18,'start'],'taoyuan:台北車站':[-15,-18,'end'],'taipei:南港展覽館':[16,2,'start'],'taipei:大安':[15,24,'start'],'taipei:東門':[12,-15,'start'],'taipei:中正紀念堂':[-15,26,'end'],'taipei:中山':[15,-16,'start'],'taipei:民權西路':[15,-15,'start'],'taipei:南京復興':[15,-16,'start'],'taipei:忠孝復興':[15,25,'start'],'taipei:忠孝新生':[-15,25,'end'],'taipei:西門':[-15,-16,'end'],'taipei:古亭':[-15,25,'end'],'taipei:景安':[-15,25,'end'],'taipei:板橋':[-15,-17,'end'],'taipei:頭前庄':[15,24,'start'],'taipei:新北產業園區':[15,-16,'start'],'taipei:大坪林':[15,24,'start'],'taipei:十四張':[-15,25,'end'],'taipei:紅樹林':[15,4,'start'],'ntlrt:紅樹林':[-15,-16,'end'],'ntlrt:十四張':[-15,25,'end'],'ntmetro:頂埔':[-15,25,'end'],'taipei:頂埔':[15,-16,'start']};
  if(overrides[p.id]){[dx,dy,anchor]=overrides[p.id]}
- return {dx,dy,anchor};
+ const offsetScale=.88;return {dx:Math.round(dx*offsetScale*10)/10,dy:Math.round(dy*offsetScale*10)/10,anchor};
 }
 function splitStationName(name){
  const chars=[...name];if(chars.length<=5)return [name];
@@ -214,7 +237,7 @@ function splitStationName(name){
 function addText(g,p,codes,coord){
  const pos=labelPlacement(p,codes,coord),leader=svgEl('path',{class:'label-leader'}),txt=svgEl('text',{class:'station-label',x:coord.x+pos.dx,y:coord.y+pos.dy,'text-anchor':pos.anchor,'data-pref-dx':pos.dx,'data-pref-dy':pos.dy,'data-pref-anchor':pos.anchor});
  const c=svgEl('tspan',{class:'station-code',x:coord.x+pos.dx,dy:'0'});c.textContent=codes.join('・');txt.appendChild(c);
- splitStationName(p.name).forEach(line=>{const n=svgEl('tspan',{class:'station-name',x:coord.x+pos.dx,dy:'14'});n.textContent=line;txt.appendChild(n)});
+ splitStationName(p.name).forEach(line=>{const n=svgEl('tspan',{class:'station-name',x:coord.x+pos.dx,dy:'11.2'});n.textContent=line;txt.appendChild(n)});
  g.append(leader,txt);
 }
 let labelLayoutRAF=0;
@@ -234,13 +257,13 @@ function labelPriority(g){
 function setLabelPosition(g,cand,coord){
  const text=g.querySelector('.station-label'),leader=g.querySelector('.label-leader'),x=coord.x+cand.dx,y=coord.y+cand.dy;
  text.setAttribute('x',x);text.setAttribute('y',y);text.setAttribute('text-anchor',cand.anchor);text.querySelectorAll('tspan').forEach(t=>t.setAttribute('x',x));
- const far=Math.hypot(cand.dx,cand.dy)>33;g.classList.toggle('label-shifted',far);
+ const far=Math.hypot(cand.dx,cand.dy)>30;g.classList.toggle('label-shifted',far);
  if(far){let tx=x,ty=y-3;if(cand.anchor==='start')tx=x-4;else if(cand.anchor==='end')tx=x+4;const mx=coord.x+(tx-coord.x)*.56,my=coord.y+(ty-coord.y)*.56;leader.setAttribute('d',`M${coord.x} ${coord.y} L${mx} ${my} L${tx} ${ty}`)}else leader.setAttribute('d','');
 }
 function labelCandidates(text,coord){
  const pref={dx:+text.dataset.prefDx||12,dy:+text.dataset.prefDy||4,anchor:text.dataset.prefAnchor||'start'},out=[pref],seen=new Set([`${pref.dx},${pref.dy},${pref.anchor}`]);
  const add=(dx,dy,anchor)=>{const k=`${Math.round(dx)},${Math.round(dy)},${anchor}`;if(!seen.has(k)){seen.add(k);out.push({dx,dy,anchor})}};
- [18,26,36,48,62,78,96,118,142,170].forEach(r=>{
+ [16,23,31,42,55,70,88,108,130,155].forEach(r=>{
   add(r,-7,'start');add(-r,-7,'end');add(0,r,'middle');add(0,-r-28,'middle');
   add(r*.72,r,'start');add(-r*.72,r,'end');add(r*.72,-r-25,'start');add(-r*.72,-r-25,'end');
  });
@@ -249,8 +272,9 @@ function labelCandidates(text,coord){
 function layoutMapLabels(){
  const svg=$('.metro-svg');if(!svg||!svg.isConnected)return;
  const reserved=[];
- svg.querySelectorAll('.map-title,.map-subtitle,.map-region').forEach(el=>{if(el.getClientRects().length)reserved.push(paddedBox(el.getBBox(),7))});
+ svg.querySelectorAll('.map-title,.map-subtitle,.map-region').forEach(el=>{if(el.getClientRects().length)reserved.push(paddedBox(el.getBBox(),6))});
  const groups=[...svg.querySelectorAll('.map-station')].filter(g=>{const cs=getComputedStyle(g);return cs.display!=='none'&&cs.visibility!=='hidden'&&!g.classList.contains('no-match')});
+ const stationObstacles=groups.map(g=>{const c=stationCoords.get(g.dataset.pid);return c?{pid:g.dataset.pid,box:{x:c.x-8.5,y:c.y-8.5,width:17,height:17}}:null}).filter(Boolean);
  groups.sort((a,b)=>labelPriority(b)-labelPriority(a)||(+a.dataset.y||0)-(+b.dataset.y||0));
  let hidden=0;
  groups.forEach(g=>{
@@ -262,6 +286,8 @@ function layoutMapLabels(){
     setLabelPosition(g,cand,coord);const box=paddedBox(text.getBBox(),2.5);
     if(box.x<8||box.y<8||box.x+box.width>MAP_W-8||box.y+box.height>MAP_H-8)continue;
     let score=0,blocked=false;for(const occ of reserved){if(boxesOverlap(box,occ)){blocked=true;score+=overlapArea(box,occ)}}
+    for(const marker of stationObstacles){if(marker.pid!==g.dataset.pid&&boxesOverlap(box,marker.box)){blocked=true;score+=overlapArea(box,marker.box)*1.6}}
+    score+=Math.hypot(cand.dx,cand.dy)*.025;
     if(score<bestScore){bestScore=score;best={cand,box}}
     if(!blocked){reserved.push(box);placed=true;return true}
    }
@@ -277,14 +303,15 @@ function layoutMapLabels(){
 
 function renderNetwork(){
  stationCoords.clear();routePointCache.length=0;const container=$('#network');container.innerHTML='';
- const svg=svgEl('svg',{class:'metro-svg',viewBox:`0 0 ${MAP_W} ${MAP_H}`,role:'img','aria-label':'北北桃捷運互動路網圖'});
- const bg=svgEl('g');const title=svgEl('text',{x:55,y:65,class:'map-title map-fixed-label'});title.textContent='北北桃捷運互動路網';const sub=svgEl('text',{x:55,y:91,class:'map-subtitle map-fixed-label'});sub.textContent='點選任一車站設定起點，再點選第二站設定終點';bg.append(title,sub);
- [['桃園機場捷運',80,155],['淡海輕軌',455,55],['台北捷運／環狀線',1120,1030],['安坑輕軌',690,1260],['三鶯線',90,1210]].forEach(([t,x,y])=>{const z=svgEl('text',{x,y,class:'map-region map-fixed-label'});z.textContent=t;bg.appendChild(z)});svg.appendChild(bg);
+ const svg=svgEl('svg',{class:'metro-svg',viewBox:`0 0 ${MAP_W} ${MAP_H}`,role:'img','aria-label':'北北桃捷運北上東右地理相對互動路網圖'});
+ const bg=svgEl('g');const title=svgEl('text',{x:48,y:58,class:'map-title map-fixed-label'});title.textContent='北北桃捷運地理相對路網';const sub=svgEl('text',{x:48,y:82,class:'map-subtitle map-fixed-label'});sub.textContent='北 ↑　東 →　非比例尺・點選車站設定起訖';bg.append(title,sub);
+ [['桃園機場捷運',90,455],['淡海輕軌',790,48],['台北捷運／環狀線',1320,310],['安坑輕軌',925,1218],['三鶯線',350,1218]].forEach(([t,x,y])=>{const z=svgEl('text',{x,y,class:'map-region map-fixed-label'});z.textContent=t;bg.appendChild(z)});
+ const compass=svgEl('g',{class:'map-compass','aria-label':'北向上、東向右'});compass.appendChild(svgEl('path',{d:'M1600 100 L1600 38 M1600 38 L1591 53 M1600 38 L1609 53',class:'compass-line'}));const north=svgEl('text',{x:1600,y:29,'text-anchor':'middle',class:'compass-text map-fixed-label'});north.textContent='北 N';const east=svgEl('text',{x:1630,y:103,class:'compass-text map-fixed-label'});east.textContent='東 E';compass.append(north,east);bg.appendChild(compass);svg.appendChild(bg);
  const lineLayer=svgEl('g',{class:'map-lines'});svg.appendChild(lineLayer);
  D.lines.forEach((line,idx)=>{const pts=interpolateLine(line);routePointCache.push({line,pts});const grp=svgEl('g',{class:`map-system sys-${line.system}`,'data-system':line.system});const displayPts=displayPointsForLine(line,pts),d=linePath(displayPts);
-  if(line.id==='Y'){grp.appendChild(svgEl('path',{d,class:'route-outline',stroke:'#8f7700','stroke-width':'12.6'}))}
-  const width=line.id==='AX'?4.2:(line.system==='ntlrt'||line.system==='ntmetro'?7:9.1);const path=svgEl('path',{d,class:'route-path',stroke:line.color,'stroke-width':width,'data-line':line.id,'data-route':line.name});
-  if(line.id==='AX'){path.setAttribute('stroke-dasharray','12 9');path.setAttribute('opacity','.95')}
+  if(line.id==='Y'){grp.appendChild(svgEl('path',{d,class:'route-outline',stroke:'#8f7700','stroke-width':'10.08'}))}
+  const width=line.id==='AX'?3.36:(line.system==='ntlrt'||line.system==='ntmetro'?5.6:7.28);const path=svgEl('path',{d,class:'route-path',stroke:line.color,'stroke-width':width,'data-line':line.id,'data-route':line.name});
+  if(line.id==='AX'){path.setAttribute('stroke-dasharray','9.6 7.2');path.setAttribute('opacity','.95')}
   if(line.name.includes('藍海線'))path.setAttribute('opacity','.78');grp.appendChild(path);lineLayer.appendChild(grp)
  });
  // Cross-system walking links.
